@@ -1,11 +1,11 @@
 class Kolt < Formula
   desc "Lightweight build tool for Kotlin"
   homepage "https://github.com/snicmakino/kolt"
-  url "https://github.com/snicmakino/kolt/releases/download/v0.25.0/kolt-0.25.0-macos-arm64.tar.gz"
+  url "https://github.com/snicmakino/kolt/releases/download/v0.26.0/kolt-0.26.0-macos-arm64.tar.gz"
   # Explicit because brew misreads the trailing "arm64" in the asset name as
   # the version ("64") when left to infer it from the url.
-  version "0.25.0"
-  sha256 "df34a230d06b744fffa9dce4ad030617e395e2955b0c836478b27e9a05f9c39c"
+  version "0.26.0"
+  sha256 "69bfa39d417fd4f22c358203e946fd7380e300b27d8f6260238721476caaceda"
   license "MIT"
 
   # The released binary loads /opt/homebrew/opt/{curl,libarchive} dylibs by
