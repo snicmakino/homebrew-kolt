@@ -1,0 +1,22 @@
+# Runs on every push to main — including the automated version bumps from
+# kolt's release.yml — so a broken formula is caught right after it lands.
+name: Test formula
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  install:
+    name: brew install on macOS arm64
+    runs-on: macos-latest
+    timeout-minutes: 15
+    steps:
+      - name: Tap, install, verify
+        run: |
+          set -euo pipefail
+          brew tap snicmakino/kolt
+          brew install kolt
+          kolt --version
+          brew test kolt
